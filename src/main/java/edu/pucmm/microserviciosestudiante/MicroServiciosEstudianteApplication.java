@@ -12,7 +12,8 @@ public class MicroServiciosEstudianteApplication implements CommandLineRunner {
     @Autowired
     private Environment environment;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+        Thread.sleep(5000);
         SpringApplication.run(MicroServiciosEstudianteApplication.class, args);
     }
 
