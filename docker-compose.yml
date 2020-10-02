@@ -10,6 +10,8 @@ services:
       - spring.datasource.url=jdbc:mysql://base-datos-app-web:3306/micro_estudiante
     networks:    #red para conectar los equipos.
       - red-app
+    volumes:
+    - mi-volumen-compose:/tmp/
     depends_on:   #indica que primero debe subir los servicios indicados.
       - base-datos-app-web
 
@@ -25,6 +27,10 @@ services:
       - ~/dato_mysql_compose:/var/lib/mysql
     networks:
       - red-app
+
 networks:  #bloque para las redes
   red-app:   #indicando la red definida
+
+volumes: #Bloque para definir los volumenes
+  mi-volumen-compose:
   
