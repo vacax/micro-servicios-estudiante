@@ -21,6 +21,8 @@ public class MicroServiciosEstudianteApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         //leyendo la información de las variables.
         String db_nombre = environment.getProperty("NOMBRE_APP");
+        String direccionDb = environment.getProperty("DB_HOST");
         System.out.println("Nombre de la Aplicación = "+db_nombre);
+        System.out.println("Dirección de la Aplicación = "+direccionDb);
     }
 }
